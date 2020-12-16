@@ -24,7 +24,7 @@ cfg.merge_from_file('configs/service.yaml')
 cfg.merge_from_file('configs/rcode.yaml')
 
 #Load model
-with open(EfficientNetB7_recognition.json, 'r') as json_file:
+with open('model/EfficientNetB7_recognition.json', 'r') as json_file:
     model_json = json_file.read()
 
 # Load weights
