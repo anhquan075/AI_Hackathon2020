@@ -132,17 +132,23 @@ def predict(INP_DIR, BATCH_SIZE, MODEL_PATH):
     topk_ids = np.concatenate(topk_ids, axis=0).squeeze()
     topk_prob = np.concatenate(topk_prob, axis=0).squeeze()
     
-    # print(topk_ids)   
-    # print(topk_prob)
+    print("topk_ids: ", topk_ids)   
+    print("topk_prob: ", topk_prob)
 
-    out_path = os.path.join(args.output_dir, 'submission_{}.txt'.format(args.model))
+    # out_path = os.path.join(args.output_dir, 'submission_{}.txt'.format(args.model))
+    out_path = os.path.join('hackathon_test', "output.txt")
     with open(out_path, 'w') as out_file:
         filenames = loader.dataset.filenames(basename=True)
         for filename, label, prob in zip(filenames, topk_ids, topk_prob):
-            out_file.write(("{}" + "\t{}\t{:.4f}"*5 + "\n").format(
+            # out_file.write(("{}" + "\t{}\t{:.4f}"*5 + "\n").format(
+            #     filename, *chain(*zip(label, prob))))
+            out_file.write(("{}" + " {} {:.4f}"*5 + "\n").format(
                 filename, *chain(*zip(label, prob))))
+            
+            print("label: {}, prob: {}".format(label, prob))
     
     return out_path
+    # return topk_ids
 
 if __name__ == '__main__':
     predict("test_1000", 8, "model/b8tf_datacrawl_epoch6.pth.tar")

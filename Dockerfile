@@ -1,4 +1,5 @@
-FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+# FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+FROM ubuntu:18.04 
 
 RUN apt-get update
 
@@ -30,4 +31,4 @@ WORKDIR /Hackathon
 
 EXPOSE 8080
 
-CMD ["python3", "service.py"]
+# CMD ["python3", "service.py"]
