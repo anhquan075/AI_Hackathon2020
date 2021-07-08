@@ -3,7 +3,7 @@ import os
 from src import predict_efficientNetB8
 from utils import post_proc, pre_proc
 
-INP_DIR = '/dataset/test_flow/test_set_A_full/'
+INP_DIR = '/final_data/test_set_A_full/'
 
 def full_flow(INP_DIR, fold=1):
 

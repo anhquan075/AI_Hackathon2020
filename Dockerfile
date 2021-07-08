@@ -1,5 +1,5 @@
-# FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
-FROM ubuntu:18.04 
+FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+#FROM ubuntu:18.04 
 
 RUN apt-get update
 
@@ -16,7 +16,8 @@ RUN add-apt-repository ppa:deadsnakes/ppa && \
     apt-get install python3-pip -y && \
     apt update && apt install -y libsm6 libxext6 && \
     apt-get install -y libxrender-dev && \ 
-    apt install libgl1-mesa-glx -y
+    apt install libgl1-mesa-glx -y \ 
+    apt-get install unzip
     #ImportError: libGL.so.1: cannot open shared object file: No such file or directory
 
 COPY . /Hackathon
@@ -29,6 +30,6 @@ RUN cd Hackathon && \
 
 WORKDIR /Hackathon
 
-EXPOSE 8080
+EXPOSE 8000
 
-# CMD ["python3", "service.py"]
+CMD ["python3", "service.py"]

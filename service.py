@@ -12,11 +12,14 @@ import time
 import json
 from time import gmtime, strftime
 import tensorflow as tf
-import keras 
-from keras.models import model_from_json
+from tensorflow import keras 
+from tensorflow.keras.models import model_from_json
+import os
+
+os.environ["SM_FRAMEWORK"] = "tf.keras"
 
 from utils import get_config, load_class_names
-from src import predict_efficientNetB8, full_flow, predict_efficientNetB7
+from src import full_flow, predict_efficientNetB7
 
 # setup config
 cfg = get_config()
@@ -151,16 +154,16 @@ def unzip_file():
    
 if __name__ == "__main__":
     input_dir = "hackathon_test"
-    # if not os.path.exists(input_dir):
-    #     os.mkdir(input_dir)
+    if not os.path.exists(input_dir):
+        os.mkdir(input_dir)
 
     if not os.path.exists(LOG_PATH):
         os.mkdir(LOG_PATH)
 
-    # if not os.path.exists(DATA_CK):
-    #     os.mkdir(DATA_CK)
+    if not os.path.exists(DATA_CK):
+        os.mkdir(DATA_CK)
     
-    # if not os.path.exists(PATH_DATA_CK):
-    #     os.mkdir(PATH_DATA_CK)
+    if not os.path.exists(PATH_DATA_CK):
+        os.mkdir(PATH_DATA_CK)
 
     app.run(debug=False, host=HOST, port=PORT)
