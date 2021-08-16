@@ -93,7 +93,7 @@ python3 service.py
 ---
 
 ## Build and run docker
-We provide a ```Dockerfile``` to easily install and run the service.
+We provide a ```Dockerfile``` to easily install and run the service. You need two GPUs with at least 16GB VRAM to run this service. 
 1. Build docker
     - **Create dockerfile**: [link Dockerfile](https://github.com/anhquan075/AI_Hackathon2020/blob/master/Dockerfile).
     - **Build image:**
