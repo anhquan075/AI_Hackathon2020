@@ -1,7 +1,7 @@
 # AICLUB_Hackathon2020
 
 UIT AI Club at AI Hackathon 2020 @ AI4VN
-
+![Image](https://scontent-sin6-4.xx.fbcdn.net/v/t1.6435-9/121107434_141140621065973_3699282883983612511_n.png?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=aPKb04Z71dIAX-utqAL&_nc_ht=scontent-sin6-4.xx&oh=a88bc974ea7b16cc9e9b5ba4f994ca86&oe=613FC9A4)
 ---
 
 # Prepare dataset
