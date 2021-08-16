@@ -40,7 +40,8 @@ UIT AI Club at AI Hackathon 2020 @ AI4VN
 
 ---
 # Train model
-1. Colab
+## Training
+1. Train on Colab
     - Link colab: [link](https://github.com/anhquan075/AI_Hackathon2020/blob/master/src/train_model/train_model.ipynb).  
 2. Train with tensorflow
     - Link: [train_efficientNet_mutil_gpu.py](https://github.com/anhquan075/AI_Hackathon2020/blob/master/src/train_model/train_efficientNet_mutil_gpu.py).
@@ -53,6 +54,8 @@ UIT AI Club at AI Hackathon 2020 @ AI4VN
 
             CUDA_VISIBLE_DEVICES=<number> python3 inference.py <path/to/dataset> -b <batch_size> --num-classes <number_class> --model <model_name> --checkpoint <path/to/model>
     - **Train with SAM optimizer:** SAM simultaneously minimizes loss value and loss sharpness. In particular, it seeks parameters that lie in neighborhoods having uniformly low loss. SAM improves model generalization and yields [SoTA performance for several datasets](https://arxiv.org/pdf/2010.01412v1.pdf). Additionally, it provides robustness to label noise on par with that provided by SoTA procedures that specifically target learning with noisy labels ([Link repo](https://github.com/davda54/sam)).
+## Inference 
+Run ```python3 src/full_flow.py``` to predict with full flow from pre-processing to post-processing. Besides, you can use the service mentioned in Section [Service](#run-service) with UI interaction.
 
 ---
 # Visualization 
