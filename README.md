@@ -5,6 +5,10 @@ UIT AI Club at AI Hackathon 2020 @ AI4VN
 ---
 
 # Prepare dataset
+Install essential dependencies
+```
+pip3 install -r requirements.txt
+```
 ### I. Crawl data
 1. Installation
     - **Install npm:** npm makes it easy for JavaScript developers to share and reuse code, and makes it easy to update the code that you’re sharing, so you can build amazing things ([link install](https://www.npmjs.com/get-npm)).  
